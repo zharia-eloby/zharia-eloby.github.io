@@ -9,9 +9,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900" rel="stylesheet">
         <style>
+            @keyframes project-button-hover {
+                to {background-color: var(--bs-primary-bg-subtle);}
+            }
             body {
                 background-color: var(--bs-light-bg-subtle);
                 font-family: "Outfit";
+            }
+            header {
+                background-color: var(--bs-light-bg-subtle);
             }
             #main-content {
                 padding-top: 10%;
@@ -23,8 +29,12 @@
                 background-color: var(--bs-white);
             }
             .project-card > a.card-footer:hover {
-                background-color: var(--bs-primary-bg-subtle);
-                color: black;
+                animation-name: project-button-hover;
+                animation-duration: 500ms;
+                animation-fill-mode: forwards;
+            }
+            footer {
+                background-color: var(--bs-secondary-bg-subtle);
             }
         </style>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -89,7 +99,7 @@
     </head>
 
     <body>
-        <header class="container-fluid fs-4 bg-light-subtle sticky-top shadow-bottom">
+        <header class="container-fluid fs-5 sticky-top">
             <nav id="page-nav" class="nav nav-underline nav-fill">
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#projects">Projects</a>
@@ -149,7 +159,7 @@
                             <div class="card-body px-3">
                                 <h3 class="card-title fs-3">Portfolio</h3>
                                 <div class="card-text fs-5">
-                                    <p class="fst-italic fw-light">HTML, CSS, Bootstrap</p>
+                                    <p class="fst-italic fw-light">HTML, CSS, JavaScript, Bootstrap</p>
                                     <p>
                                         The site you're looking at right now! A static, accessible
                                         website utilizing the Bootstrap framework to create a responsive
@@ -233,7 +243,7 @@
                             </div>
 
                             <div class="d-flex justify-content-center my-3">
-                                <input id="submit-form" type="submit" value="Send" class="w-50 fs-5 btn btn-primary">
+                                <input id="submit-form" type="submit" value="Send" class="w-50 fs-5 fw-bold rounded-3 border-3 btn btn-outline-primary">
                             </div>
                             
                             <div id="email-success" class="text-success text-center fs-4" role="alert" hidden>
@@ -264,7 +274,7 @@
             </section>
         </main>
 
-        <footer class="container-fluid py-3 text-center bg-secondary-subtle">
+        <footer class="container-fluid py-4 text-center border-top border-black border-3">
             <div class="row justify-content-center">
                 <a class="col-2 col-sm-1" href="https://www.linkedin.com/in/zharia-eloby/" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
