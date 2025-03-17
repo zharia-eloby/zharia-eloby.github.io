@@ -9,83 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Brawler:wght@400;700&display=swap" rel="stylesheet">
-        <style>
-            @keyframes project-button-hover {
-                to {
-                    fill: brown;
-                }
-            }
-            @keyframes submit-form-button-hover {
-                to {
-                    background-color: brown;
-                    color: white;
-                }
-            }
-            body {
-                font-family: "Brawler";
-            }
-            body, header {
-                background-color: linen;
-            }
-            .nav-link, .nav-link:hover {
-                color: black;
-            }
-            .nav-underline .nav-link.active {
-                color: brown;
-            }
-            #main-content {
-                padding-top: 10%;
-            }
-            section { 
-                padding-bottom: 15%;
-            }
-            #about-name {
-                color: brown;
-            }
-            .project-card {
-                background-color: whitesmoke;
-            }
-            .project-card > a.card-footer {
-                background-color: transparent;
-                border-color: black !important;
-            }
-            .project-card > a > svg {
-                fill: black;
-            }
-            .project-card > a:hover > svg {
-                animation-name: project-button-hover;
-                animation-duration: 300ms;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease;
-            }
-            #closing > hr {
-                border: none;
-                color: brown;
-                opacity: 100%;
-                background-color: brown;
-                height: 2px;
-                margin-bottom: 15%;
-            }
-            #submit-form {
-                border-color: brown !important;
-                color: brown;
-            }
-            #submit-form:hover {
-                animation-name: submit-form-button-hover;
-                animation-duration: 300ms;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease;
-            }
-            #email-success > p {
-                color: darkgreen;
-            }
-            #email-error > p {
-                color: red;
-            }
-            footer {
-                background-color: transparent;
-            }
-        </style>
+        <link type="text/css" href="theme.css" rel="stylesheet">
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script type="text/javascript">
             (function() {
@@ -254,7 +178,7 @@
                     <h2 id="skills-heading" class="display-6 col-12 col-lg-4">My Knowledge Base</h2>
 
                     <div id="skills-list" class="col-12 col-lg-8 px-3">
-                        <div class="row row-cols-2 row-cols-lg-3 row-cols-xxl-4 g-3 pb-3 text-center fs-4 border-start border-3 border-black align-items-center">
+                        <div class="row row-cols-2 row-cols-lg-3 row-cols-xxl-4 g-3 pb-3 text-center fs-4 border-start border-3 border-black">
                             <div class="col">Python</div>
                             <div class="col">Java</div>
                             <div class="col">HTML/CSS</div>
@@ -296,7 +220,7 @@
                                 <input id="submit-form" type="submit" value="Send" class="w-50 fs-5 rounded-3 border-3 btn">
                             </div>
                             
-                            <div id="email-success" class="text-success text-center fs-4" role="alert" hidden>
+                            <div id="email-success" class="text-center fs-4" role="alert" hidden>
                                 <p>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
@@ -308,7 +232,7 @@
                                 </p>
                             </div>
 
-                            <div id="email-error" class="text-danger text-center fs-4" role="alert" hidden>
+                            <div id="email-error" class="text-center fs-4" role="alert" hidden>
                                 <p>
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
