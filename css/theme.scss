@@ -1,16 +1,23 @@
+$accent-color: brown;
+$error-color: red;
+$success-color: darkgreen;
+$main-font: "Brawler";
+$section-spacing-amount: 15%;
+$animation-duration: 300ms;
+
 @keyframes project-button-hover {
     to {
-        fill: brown;
+        fill: $accent-color;
     }
 }
 @keyframes submit-form-button-hover {
     to {
-        background-color: brown;
+        background-color: $accent-color;
         color: white;
     }
 }
 body {
-    font-family: "Brawler";
+    font-family: $main-font;
 }
 body, header {
     background-color: linen;
@@ -19,16 +26,16 @@ body, header {
     color: black;
 }
 .nav-underline .nav-link.active {
-    color: brown;
+    color: $accent-color;
 }
 #main-content {
     padding-top: 10%;
 }
 section { 
-    padding-bottom: 15%;
+    padding-bottom: $section-spacing-amount;
 }
 #about-name {
-    color: brown;
+    color: $accent-color;
 }
 .project-card {
     background-color: whitesmoke;
@@ -42,33 +49,33 @@ section {
 }
 .project-card > a:hover > svg {
     animation-name: project-button-hover;
-    animation-duration: 300ms;
+    animation-duration: $animation-duration;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
 #closing > hr {
     border: none;
-    color: brown;
+    color: $accent-color;
     opacity: 100%;
-    background-color: brown;
+    background-color: $accent-color;
     height: 2px;
-    margin-bottom: 15%;
+    margin-bottom: $section-spacing-amount;
 }
 #submit-form {
-    border-color: brown !important;
-    color: brown;
+    border-color: $accent-color !important;
+    color: $accent-color;
 }
 #submit-form:hover {
     animation-name: submit-form-button-hover;
-    animation-duration: 300ms;
+    animation-duration: $animation-duration;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
 #email-success > p {
-    color: darkgreen;
+    color: $error-color;
 }
 #email-error > p {
-    color: red;
+    color: $error-color;
 }
 footer {
     background-color: transparent;
