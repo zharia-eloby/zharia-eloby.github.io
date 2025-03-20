@@ -1,11 +1,16 @@
+$accent-color: brown;
+$error-color: red;
+$success-color: darkgreen;
+$section-spacing: 15%;
+
 @keyframes project-button-hover {
     to {
-        fill: brown;
+        fill: $accent-color;
     }
 }
 @keyframes submit-form-button-hover {
     to {
-        background-color: brown;
+        background-color: $accent-color;
         color: white;
     }
 }
@@ -19,16 +24,16 @@ body, header {
     color: black;
 }
 .nav-underline .nav-link.active {
-    color: brown;
+    color: $accent-color;
 }
 #main-content {
     padding-top: 10%;
 }
 section { 
-    padding-bottom: 15%;
+    padding-bottom: $section-spacing;
 }
 #about-name {
-    color: brown;
+    color: $accent-color;
 }
 .project-card {
     background-color: whitesmoke;
@@ -48,15 +53,15 @@ section {
 }
 #closing > hr {
     border: none;
-    color: brown;
+    color: $accent-color;
     opacity: 100%;
-    background-color: brown;
+    background-color: $accent-color;
     height: 2px;
-    margin-bottom: 15%;
+    margin-bottom: $section-spacing;
 }
 #submit-form {
-    border-color: brown !important;
-    color: brown;
+    border-color: $accent-color !important;
+    color: $accent-color;
 }
 #submit-form:hover {
     animation-name: submit-form-button-hover;
@@ -65,10 +70,10 @@ section {
     animation-timing-function: ease;
 }
 #email-success > p {
-    color: darkgreen;
+    color: $success-color;
 }
 #email-error > p {
-    color: red;
+    color: $error-color;
 }
 footer {
     background-color: transparent;
