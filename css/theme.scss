@@ -2,6 +2,7 @@ $accent-color: brown;
 $error-color: red;
 $success-color: darkgreen;
 $section-spacing: 15%;
+$xxl-viewport-min-width: 1400px;
 
 @keyframes project-button-hover {
     to {
@@ -34,6 +35,16 @@ section {
 }
 #about-name {
     color: $accent-color;
+}
+@media only screen and (max-width: $xxl-viewport-min-width) {
+    #about-text {
+        text-align: center;
+    }
+}
+@media only screen and (min-width: $xxl-viewport-min-width) {
+    #about-text {
+        text-align: left;
+    }
 }
 .project-card {
     background-color: whitesmoke;

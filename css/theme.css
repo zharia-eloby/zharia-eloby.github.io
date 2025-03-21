@@ -37,6 +37,16 @@ section {
   color: brown;
 }
 
+@media only screen and (max-width: 1400px) {
+  #about-text {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #about-text {
+    text-align: left;
+  }
+}
 .project-card {
   background-color: whitesmoke;
 }

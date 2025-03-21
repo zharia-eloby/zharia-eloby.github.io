@@ -34,11 +34,6 @@
             }
 
             window.onload = function() {
-                if (window.innerWidth < 1400) {
-                    const aboutText = document.getElementById("about-text");
-                    aboutText.classList.add("text-center");
-                }
-
                 document.getElementById('submit-form').addEventListener('onClick', function(event) {
                     const successMessage = document.getElementById("email-success");
                     const errorMessage = document.getElementById("email-error");
