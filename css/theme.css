@@ -13,6 +13,10 @@ body {
   font-family: "Brawler";
 }
 
+header {
+  box-shadow: 0px 5px 8px -8px gray;
+}
+
 body, header {
   background-color: linen;
 }
