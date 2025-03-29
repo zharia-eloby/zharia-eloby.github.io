@@ -1,19 +1,15 @@
 $accent-color: brown;
+$accent-text-color: white;
+$accent-hover-color: maroon;
 $error-color: red;
 $success-color: darkgreen;
 $section-spacing: 15%;
 $xxl-viewport-min-width: 1400px;
+$md-viewport-min-width: 768px;
 
 @keyframes project-button-hover {
     to {
         fill: $accent-color;
-    }
-}
-
-@keyframes submit-form-button-hover {
-    to {
-        background-color: $accent-color;
-        color: white;
     }
 }
 
@@ -91,15 +87,20 @@ section {
 }
 
 #submit-form {
-    border-color: $accent-color !important;
-    color: $accent-color;
+    background-color: $accent-color;
+    color: $accent-text-color;
 }
 
-#submit-form:hover {
-    animation-name: submit-form-button-hover;
-    animation-duration: 300ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
+@media only screen and (min-width: $md-viewport-min-width) {
+    #submit-form:hover {
+        background-color: $accent-hover-color;
+    }
+}
+
+@media only screen and (max-width: $md-viewport-min-width) {
+    #submit-form:active {
+        background-color: $accent-hover-color;
+    }
 }
 
 #email-success > p {

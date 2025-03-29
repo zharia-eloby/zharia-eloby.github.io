@@ -3,12 +3,6 @@
     fill: brown;
   }
 }
-@keyframes submit-form-button-hover {
-  to {
-    background-color: brown;
-    color: white;
-  }
-}
 body {
   font-family: "Brawler";
 }
@@ -81,17 +75,20 @@ section {
 }
 
 #submit-form {
-  border-color: brown !important;
-  color: brown;
+  background-color: brown;
+  color: white;
 }
 
-#submit-form:hover {
-  animation-name: submit-form-button-hover;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease;
+@media only screen and (min-width: 768px) {
+  #submit-form:hover {
+    background-color: maroon;
+  }
 }
-
+@media only screen and (max-width: 768px) {
+  #submit-form:active {
+    background-color: maroon;
+  }
+}
 #email-success > p {
   color: darkgreen;
 }
