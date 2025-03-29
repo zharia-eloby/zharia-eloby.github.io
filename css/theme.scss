@@ -9,62 +9,78 @@ $xxl-viewport-min-width: 1400px;
         fill: $accent-color;
     }
 }
+
 @keyframes submit-form-button-hover {
     to {
         background-color: $accent-color;
         color: white;
     }
 }
+
 body {
     font-family: "Brawler";
 }
+
 header {
     box-shadow: 0px 5px 8px -8px gray;
 }
+
 body, header {
     background-color: linen;
 }
+
 .nav-link, .nav-link:hover {
     color: black;
 }
+
 .nav-underline .nav-link.active {
     color: $accent-color;
 }
+
 #main-content {
     padding-top: 10%;
 }
+
 section { 
     padding-bottom: $section-spacing;
 }
+
 #about-name {
     color: $accent-color;
 }
+
 @media only screen and (max-width: $xxl-viewport-min-width) {
     #about-text {
         text-align: center;
     }
 }
+
 @media only screen and (min-width: $xxl-viewport-min-width) {
     #about-text {
         text-align: left;
     }
 }
+
 .project-card {
     background-color: whitesmoke;
 }
+
 .project-card > a.card-footer {
     background-color: transparent;
     border-color: black !important;
 }
+
 .project-card > a > svg {
     fill: black;
 }
+
 .project-card > a:hover > svg {
     animation-name: project-button-hover;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
+
 #closing > hr {
     border: none;
     color: $accent-color;
@@ -73,22 +89,27 @@ section {
     height: 2px;
     margin-bottom: $section-spacing;
 }
+
 #submit-form {
     border-color: $accent-color !important;
     color: $accent-color;
 }
+
 #submit-form:hover {
     animation-name: submit-form-button-hover;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
 }
+
 #email-success > p {
     color: $success-color;
 }
+
 #email-error > p {
     color: $error-color;
 }
+
 footer {
     background-color: transparent;
 }
