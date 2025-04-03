@@ -54,16 +54,16 @@ section {
     background-color: whitesmoke;
 }
 
-.project-card > a.card-footer {
+.project-card > .card-footer {
     background-color: transparent;
     border-color: black !important;
 }
 
-.project-card > a > svg {
+.project-card > div > a > svg {
     fill: black;
 }
 
-.project-card > a:hover > svg {
+.project-card > div > a:hover > svg {
     animation-name: project-button-hover;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
