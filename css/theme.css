@@ -1,21 +1,14 @@
-@keyframes project-button-hover {
-  to {
-    fill: brown;
-  }
-}
 body {
   font-family: "Brawler";
+  background-color: linen;
 }
 
 header {
   box-shadow: 0px 5px 8px -8px gray;
-}
-
-body, header {
   background-color: linen;
 }
 
-.nav-link, .nav-link:hover, .nav-link:focus {
+.nav-link, .nav-link:hover, .nav-link:focus, .nav-link:active {
   color: black;
 }
 
@@ -24,11 +17,7 @@ body, header {
 }
 
 @media only screen and (max-width: 768px) {
-  .nav-link:focus:not(.active) {
-    border: none;
-  }
-  .nav-link:active {
-    color: black;
+  .nav-link:focus:not(.active), .nav-link:active {
     border: none;
   }
 }
@@ -36,10 +25,11 @@ body, header {
   .nav-link:focus:not(.active):not(:hover) {
     border: none;
   }
-  .nav-link:active {
-    color: black;
-  }
 }
+footer {
+  background-color: transparent;
+}
+
 #main-content {
   padding-top: 10%;
 }
@@ -62,21 +52,23 @@ section {
     text-align: left;
   }
 }
+@keyframes project-button-hover {
+  to {
+    fill: brown;
+  }
+}
 .project-card {
   background-color: whitesmoke;
 }
-
-.project-card > .card-footer {
+.project-card .card-footer {
   background-color: transparent;
   border-color: black !important;
 }
-
-.project-card > div > a > svg {
+.project-card div > a > svg {
   fill: black;
   color: transparent;
 }
-
-.project-card > div > a:hover > svg {
+.project-card div > a:hover > svg {
   animation-name: project-button-hover;
   animation-duration: 300ms;
   animation-fill-mode: forwards;
@@ -113,10 +105,6 @@ section {
 
 #email-error > p {
   color: red;
-}
-
-footer {
-  background-color: transparent;
 }
 
 /*# sourceMappingURL=theme.css.map */

@@ -1,24 +1,16 @@
 @use "variables";
 
-@keyframes project-button-hover {
-    to {
-        fill: variables.$accent-color;
-    }
-}
-
 body {
     font-family: "Brawler";
+    background-color: variables.$primary-color;
 }
 
 header {
     box-shadow: 0px 5px 8px -8px gray;
-}
-
-body, header {
     background-color: variables.$primary-color;
 }
 
-.nav-link, .nav-link:hover, .nav-link:focus {
+.nav-link, .nav-link:hover, .nav-link:focus, .nav-link:active {
     color: variables.$primary-text-color;
 }
 
@@ -27,12 +19,7 @@ body, header {
 }
 
 @media only screen and (max-width:variables.$md-viewport-min-width) {
-    .nav-link:focus:not(.active) {
-        border: none;
-    }
-
-    .nav-link:active {
-        color: variables.$primary-text-color;
+    .nav-link:focus:not(.active), .nav-link:active {
         border: none;
     }
 }
@@ -41,10 +28,10 @@ body, header {
     .nav-link:focus:not(.active):not(:hover) {
         border: none;
     }
+}
 
-    .nav-link:active {
-        color: variables.$primary-text-color;
-    }
+footer {
+    background-color: transparent;
 }
 
 #main-content {
@@ -71,25 +58,31 @@ section {
     }
 }
 
+@keyframes project-button-hover {
+    to {
+        fill: variables.$accent-color;
+    }
+}
+
 .project-card {
     background-color: whitesmoke;
-}
 
-.project-card > .card-footer {
-    background-color: transparent;
-    border-color: black !important;
-}
+    .card-footer {
+        background-color: transparent;
+        border-color: black !important;
+    }
 
-.project-card > div > a > svg {
-    fill: black;
-    color: transparent;
-}
+    div > a > svg {
+        fill: black;
+        color: transparent;
+    }
 
-.project-card > div > a:hover > svg {
-    animation-name: project-button-hover;
-    animation-duration: 300ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
+    div > a:hover > svg {
+        animation-name: project-button-hover;
+        animation-duration: 300ms;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+    }
 }
 
 #closing > hr {
@@ -124,8 +117,4 @@ section {
 
 #email-error > p {
     color: variables.$error-color;
-}
-
-footer {
-    background-color: transparent;
 }
