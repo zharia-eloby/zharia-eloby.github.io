@@ -1,16 +1,7 @@
-const skills = [
-    "Python",
-    "Java",
-    "HTML",
-    "CSS/Sass",
-    "JavaScript",
-    "Bootstrap",
-    "SQL",
-    "React",
-    "Unity",
-    "Git/GitHub"
-];
-function loadSkills() {
+fetch('./scripts/data/skills.json').then((response) => {
+    return response.json();
+}).then((data) => {
+    const skills = data.skills;
     const skillsList = document.getElementById('skills-list');
     const skillTemplate = document.getElementById('skill-template');
 
@@ -20,4 +11,4 @@ function loadSkills() {
         skillClone.querySelector('div').innerText = skills[i];
         skillsList.appendChild(skillClone);
     }
-}
+});
