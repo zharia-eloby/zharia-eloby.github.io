@@ -15,7 +15,7 @@ body, header {
   background-color: linen;
 }
 
-.nav-link, .nav-link:hover {
+.nav-link, .nav-link:hover, .nav-link:focus {
   color: black;
 }
 
@@ -23,6 +23,23 @@ body, header {
   color: brown;
 }
 
+@media only screen and (max-width: 768px) {
+  .nav-link:focus:not(.active) {
+    border: none;
+  }
+  .nav-link:active {
+    color: black;
+    border: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav-link:focus:not(.active):not(:hover) {
+    border: none;
+  }
+  .nav-link:active {
+    color: black;
+  }
+}
 #main-content {
   padding-top: 10%;
 }

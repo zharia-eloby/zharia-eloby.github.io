@@ -18,12 +18,33 @@ body, header {
     background-color: variables.$primary-color;
 }
 
-.nav-link, .nav-link:hover {
+.nav-link, .nav-link:hover, .nav-link:focus {
     color: variables.$primary-text-color;
 }
 
 .nav-underline .nav-link.active {
     color: variables.$accent-color;
+}
+
+@media only screen and (max-width:variables.$md-viewport-min-width) {
+    .nav-link:focus:not(.active) {
+        border: none;
+    }
+
+    .nav-link:active {
+        color: variables.$primary-text-color;
+        border: none;
+    }
+}
+
+@media only screen and (min-width:variables.$md-viewport-min-width) {
+    .nav-link:focus:not(.active):not(:hover) {
+        border: none;
+    }
+
+    .nav-link:active {
+        color: variables.$primary-text-color;
+    }
 }
 
 #main-content {
