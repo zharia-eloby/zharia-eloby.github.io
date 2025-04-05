@@ -52,9 +52,14 @@ section {
     text-align: left;
   }
 }
-@keyframes project-button-hover {
+@keyframes project-button-hover-fill {
   to {
     fill: brown;
+  }
+}
+@keyframes project-button-hover-stroke {
+  to {
+    stroke: brown;
   }
 }
 .project-card {
@@ -64,12 +69,18 @@ section {
   background-color: transparent;
   border-color: black !important;
 }
-.project-card div > a > svg {
+.project-card svg {
   fill: black;
   color: transparent;
 }
-.project-card div > a:hover > svg {
-  animation-name: project-button-hover;
+.project-card a:hover path:not(.stroke-only) {
+  animation-name: project-button-hover-fill;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+.project-card a:hover path.stroke-only {
+  animation-name: project-button-hover-stroke;
   animation-duration: 300ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease;

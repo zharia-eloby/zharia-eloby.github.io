@@ -58,9 +58,15 @@ section {
     }
 }
 
-@keyframes project-button-hover {
+@keyframes project-button-hover-fill {
     to {
         fill: variables.$accent-color;
+    }
+}
+
+@keyframes project-button-hover-stroke {
+    to {
+        stroke: variables.$accent-color;
     }
 }
 
@@ -72,16 +78,25 @@ section {
         border-color: black !important;
     }
 
-    div > a > svg {
+    svg {
         fill: black;
         color: transparent;
     }
 
-    div > a:hover > svg {
-        animation-name: project-button-hover;
-        animation-duration: 300ms;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease;
+    a:hover {
+        path:not(.stroke-only) {
+            animation-name: project-button-hover-fill;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        path.stroke-only {
+            animation-name: project-button-hover-stroke;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
     }
 }
 
